@@ -1,6 +1,6 @@
-import { Header } from "./Header";
-import { ApprenticeshipsPage } from "./ApprenticeshipsPage";
-import { Footer } from "./Footer";
+import { Header } from "./components/Layout/Header";
+import { ApprenticeshipsPage } from "./components/Apprenticeships/ApprenticeshipsPage";
+import { Footer } from "./components/Layout/Footer";
 
 function App() {
   return (
