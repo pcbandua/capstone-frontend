@@ -1,7 +1,26 @@
-
-
+import { ApplicationsNew } from "./ApplicationsNew";
+import axios from "axios";
+import { useState } from "react";
 
 export function ApprenticeshipsShow ({apprenticeship}){
+  const [applications, setApplications] = useState ([])
+
+
+  const handleCreate = (params, successCallback) => {
+    console.log("handleCreate", params);
+    axios.post("http://localhost:3000/applications.json", params).then((response) => {
+      setApplications([...applications, response.data]);
+      successCallback();
+    });
+  }; 
+
+const handleCreateApplication = () => {
+const params = {apprentice_id: apprentice.id, apprenticeship_id: apprenticeship.id};
+handleCreate (params, () => {
+ console.log("Application submission success")
+})
+}
+
 
     return (
       <div>
@@ -17,8 +36,10 @@ export function ApprenticeshipsShow ({apprenticeship}){
             <p><b>Hourly Compensation:</b> {apprenticeship.compensation}</p>
             <p><b>Time Committment:</b> {apprenticeship.duration}</p>
             <p><b>Nationally Recognized:</b> {apprenticeship.national_registered_status}</p>
-            <button>Apply</button>
+            <button onClick={handleCreateApplication}>Apply For This Apprenticeship</button>
             </div>
+          
       </div>
+     
     );
   }

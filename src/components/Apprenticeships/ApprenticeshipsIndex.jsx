@@ -11,7 +11,7 @@ export function ApprenticeshipsIndex({apprenticeships, onShow}) {
           <p><b>Best Suited to Holland Codes:</b> {apprenticeship.holland_code_preference}</p>
           <p><b>Hourly Compensation:</b> {apprenticeship.compensation}</p>
           <p><b>Time Committment:</b> {apprenticeship.duration}</p>
-          <button onClick={() => onShow(apprenticeship)}>Show Details</button>
+          <button onClick={() => onShow(apprenticeship)}>More Details</button>
           </div>
       ))}
     </div>
