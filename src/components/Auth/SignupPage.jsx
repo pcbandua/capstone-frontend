@@ -34,7 +34,7 @@ export function SignupPage() {
   };
 
   return (
-    <div id="signup">
+    <div className="py-6" id="signup">
       <h1>Signup</h1>
 
       <div>

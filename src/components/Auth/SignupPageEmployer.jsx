@@ -22,8 +22,8 @@ setErrors(error.response.data.errors);
 };
 
 return (
-  <div id="signup">
-  <h1>Signup As An Employer</h1>
+  <div className="py-6" id="signup">
+    <div className="text-3xl" >Signup As An Employer</div>
   <ul>
     {errors.map((error) => (
       <li key={error}>{error}</li>

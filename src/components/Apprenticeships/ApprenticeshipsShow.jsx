@@ -2,7 +2,7 @@ import { ApplicationsNew } from "./ApplicationsNew";
 import axios from "axios";
 import { useState } from "react";
 
-export function ApprenticeshipsShow ({apprenticeship}){
+export function ApprenticeshipsShow ({apprenticeship, currentUserId}){
   const [applications, setApplications] = useState ([])
 
 
@@ -13,9 +13,13 @@ export function ApprenticeshipsShow ({apprenticeship}){
       successCallback();
     });
   }; 
+ 
+  // Create this 
+// const getCurrentUser = 
 
-const handleCreateApplication = () => {
-const params = {apprentice_id: apprentice.id, apprenticeship_id: apprenticeship.id};
+const handleCreateApplication = (currentUserId) => {
+  const params = {apprentice_id: currentUserId, apprenticeship_id: apprenticeship.id};
+console.log("test test", currentUserId)
 handleCreate (params, () => {
  console.log("Application submission success")
 })

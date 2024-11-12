@@ -4,9 +4,12 @@ import { Footer } from "./components/Layout/Footer";
 
 function App() {
   return (
-    <div>
+    <div className="container mx-auto">
       <Header />
+      <div >
       <ApprenticeshipsPage />
+      </div>
+      
       <Footer />
     </div>
   )

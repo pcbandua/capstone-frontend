@@ -29,8 +29,12 @@ export function LoginPage() {
   };
 
   return (
-    <div id="login">
-      <h1>Login</h1>
+    <div className=" py-6" id="login">
+      
+      <div className="text-3xl">
+      Login
+      </div>
+      
       <ul>
         {errors.map((error) => (
           <li key={error}>{error}</li>

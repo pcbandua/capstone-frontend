@@ -22,8 +22,8 @@ export function SignupPageApprentice() {
   };
 
   return (
-    <div id="signup">
-    <h1>Signup As An Apprentice</h1>
+    <div className="py-6" id="signup">
+    <div className="text-3xl" >Signup As An Apprentice</div>
     <ul>
       {errors.map((error) => (
         <li key={error}>{error}</li>
