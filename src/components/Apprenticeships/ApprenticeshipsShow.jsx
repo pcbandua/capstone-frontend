@@ -17,13 +17,21 @@ export function ApprenticeshipsShow ({apprenticeship, currentUserId}){
   // Create this 
 // const getCurrentUser = 
 
-const handleCreateApplication = (currentUserId) => {
-  const params = {apprentice_id: currentUserId, apprenticeship_id: apprenticeship.id};
-console.log("test test", currentUserId)
-handleCreate (params, () => {
- console.log("Application submission success")
-})
-}
+// const handleCreateApplication = (currentUserId) => {
+//   const params = {apprentice_id: currentUserId, apprenticeship_id: apprenticeship.id};
+// console.log("test test", currentUserId)
+// handleCreate (params, () => {
+//  console.log("Application submission success")
+// })
+// }
+
+const handleCreateApplication = () => {
+  const params = { apprentice_id: currentUserId, apprenticeship_id: apprenticeship.id };
+  console.log("Submitting application with currentUserId:", currentUserId);
+  handleCreate(params, () => {
+    console.log("Application submission success");
+  });
+};
 
 
     return (

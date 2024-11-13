@@ -1,18 +1,42 @@
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+
 import { Header } from "./components/Layout/Header";
-import { ApprenticeshipsPage } from "./components/Apprenticeships/ApprenticeshipsPage";
-import { Footer } from "./components/Layout/Footer";
+import { SignupPage } from "./components/Auth/SignupPage";
+import {LoginPage} from "./components/Auth/LoginPage"
+import { ApprenticeshipsPage}  from "./components/Apprenticeships/ApprenticeshipsPage"
+import { Footer } from "./components/Layout/Footer"
+
+const router = createBrowserRouter([
+  {
+    element: (
+      <div>
+        <Header />
+        <div className="container-auto">
+        <Outlet />
+        </div>
+        
+        <Footer />
+      </div>
+    ),
+    children: [
+      {
+        path: "/",
+        element: <ApprenticeshipsPage />,
+      },
+      {
+        path: "/signup",
+        element: <SignupPage />,
+      },
+      {
+        path: "/login",
+        element: <LoginPage />,
+      },
+    ],
+  },
+]);
 
 function App() {
-  return (
-    <div className="container mx-auto">
-      <Header />
-      <div >
-      <ApprenticeshipsPage />
-      </div>
-      
-      <Footer />
-    </div>
-  )
+  return <RouterProvider router={router} />;
 }
 
 export default App;

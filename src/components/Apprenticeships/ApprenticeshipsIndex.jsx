@@ -98,15 +98,19 @@ export function ApprenticeshipsIndex({ apprenticeships, onShow }) {
 
       {apprenticeships.map((apprenticeship) => (
         <Card key={apprenticeship.id} className="w-full mb-4">
+          <div>
           <CardHeader>
+            <div className="text-xl">
             <CardTitle>{apprenticeship.title}</CardTitle>
-            <CardDescription>
+            </div>
+              <CardDescription>
               Location: {apprenticeship.location_status}
             </CardDescription>
           </CardHeader>
+          </div>
           <CardContent>
-            <p><b>Best Suited to Holland Codes:</b> {apprenticeship.holland_code_preference}</p>
-            <p><b>Hourly Compensation:</b> {apprenticeship.compensation}</p>
+            <p><b>Best for Holland Codes:</b> {apprenticeship.holland_code_preference}</p>
+            <p><b>Hourly Pay Rate:</b> {apprenticeship.compensation}</p>
             <p><b>Time Commitment:</b> {apprenticeship.duration}</p>
           </CardContent>
           <CardFooter>
