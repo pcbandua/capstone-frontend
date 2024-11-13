@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     element: (
       <div>
         <Header />
-        <div className="container-auto">
+        <div className="container mx-auto">
         <Outlet />
         </div>
         
