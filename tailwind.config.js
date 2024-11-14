@@ -10,6 +10,9 @@ export default {
       center: true,
     },
   	extend: {
+			fontFamily: {
+        rubik: ['Rubik', 'sans-serif'],
+			},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',

@@ -9,7 +9,7 @@ import { Footer } from "./components/Layout/Footer"
 const router = createBrowserRouter([
   {
     element: (
-      <div className="font-[rubik]">
+      <div className="font-rubik">
         <Header />
         <div className="container mx-auto">
         <Outlet />
