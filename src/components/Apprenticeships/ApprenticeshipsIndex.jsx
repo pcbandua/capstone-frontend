@@ -17,22 +17,26 @@ export function ApprenticeshipsIndex({ apprenticeships, onShow }) {
   return (
     <>
       <div className="py-6 max-md:col-span-2" id="signup">
-        <div className="text-3xl mb-4">Apprenticeship Opportunities</div>
+        
 
         {/* Search Box */}
-        <div className="py-6 bg-slate-500">
+        <div className="py-6 bg-cyan-500 rounded-md container mx-auto flex items-center justify-center">
+        <div className="text-3xl mb-4 font-semibold">Browse Apprenticeships</div>  
+          <div>
           <p>
-            Search: <input type="text" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} />
+            Search: <input className="rounded-md lg:w-96
+            " type="text" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} />
           </p>
-          <h1>{searchTerm}</h1>
+      
+          </div>
         </div>
 
         {/* Cards */}
-        <div className="  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className=" py-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 ">
           {apprenticeships
             .filter((apprenticeship) => apprenticeship.title.toLowerCase().includes(searchTerm.toLowerCase()))
             .map((apprenticeship) => (
-              <Card key={apprenticeship.id} className="w-96 mb-4">
+              <Card key={apprenticeship.id} className="w-96 mb-4 flex flex-col h-full">
                 <div>
                   <CardHeader>
                     <div className="text-xl">
@@ -43,15 +47,18 @@ export function ApprenticeshipsIndex({ apprenticeships, onShow }) {
                     </CardDescription>
                   </CardHeader>
                 </div>
-                <CardContent>
+                <CardContent className="flex-grow">
                   <p><b>Best for Holland Codes:</b> {apprenticeship.holland_code_preference}</p>
                   <p><b>Hourly Pay Rate:</b> {apprenticeship.compensation}</p>
                   <p><b>Time Commitment:</b> {apprenticeship.duration}</p>
                 </CardContent>
                 <CardFooter>
-                  <Button onClick={() => onShow(apprenticeship)} variant="outline">
-                    More Details
+                  <div className="mt-auto">
+                  <Button className="bg-lime-400 w-full"  onClick={() => onShow(apprenticeship)} variant="outline">
+                    View Details
                   </Button>
+                  </div>
+                  
                 </CardFooter>
               </Card>
             ))}
