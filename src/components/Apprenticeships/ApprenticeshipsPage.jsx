@@ -36,9 +36,7 @@ export function ApprenticeshipsPage() {
   
   return (
     <main>
-      <LoginPage />
-      <SignupPageApprentice />
-      <SignupPageEmployer />
+    
       <ApprenticeshipsIndex apprenticeships={apprenticeships} onShow={handleShow}/>
       <Modal show={isApprenticeshipsShowVisible} onClose={handleClose}>
         <ApprenticeshipsShow apprenticeship={currentApprenticeship}/>

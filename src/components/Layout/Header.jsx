@@ -1,6 +1,7 @@
 import { SignupPage } from "../Auth/SignupPage"
 import { Link } from "react-router-dom"
 import { LogoutLink } from "../Auth/LogoutLink"
+import { LoginPage } from "../Auth/LoginPage";
 
 export function Header() {
 let authenticationLinks;
@@ -23,8 +24,14 @@ authenticationLinks = (
 
   return (
     <header>
-      <nav className="bg-slate-600 text-slate-100 py-4">
-        <Link to="/">Home</Link> | <Link to="/">View Apprenticeships</Link> | {authenticationLinks} 
+      <nav className="bg-slate-100 container mx-auto text-slate-100 py-4">
+        <img src="src/assets/Logo@2x.png" alt="" />
+        <div>
+          <Link to="/">Home</Link>
+        </div> 
+        <div>
+          
+        </div><Link to="/">View Apprenticeships</Link> | <Link to="/">View Apprenticeships</Link>{authenticationLinks} 
       </nav>
     </header>
   )
