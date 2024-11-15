@@ -7,6 +7,7 @@ import { SignupPageApprentice } from "../Auth/SignupPageApprentice";
 import { SignupPageEmployer } from "../Auth/SignupPageEmployer";
 import { LoginPage } from "../Auth/LoginPage";
 import ApprenticeshipsAd from "./ApprenticeshipsAd";
+
 export function ApprenticeshipsPage() {
   const [isApprenticeshipsShowVisible, setIsApprenticeshipsShowVisible] = useState(false);
   const [currentApprenticeship, setCurrentApprenticeship] = useState({});
@@ -37,6 +38,7 @@ export function ApprenticeshipsPage() {
   return (
     <main>
       <ApprenticeshipsAd />
+   
       <ApprenticeshipsIndex apprenticeships={apprenticeships} onShow={handleShow}/>
       <Modal show={isApprenticeshipsShowVisible} onClose={handleClose}>
         <ApprenticeshipsShow apprenticeship={currentApprenticeship}/>
