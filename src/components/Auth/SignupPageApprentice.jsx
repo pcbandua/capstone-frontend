@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { Button, buttonVariants } from "../ui/button";
 
 export function SignupPageApprentice() {
   const [errors, setErrors] = useState([]);
@@ -22,45 +23,111 @@ export function SignupPageApprentice() {
   };
 
   return (
-    <div className="py-6" id="signup">
-    <div className="text-3xl" >Signup As An Apprentice</div>
+<div className="min-h-36 py-40" id="login">
+      <div className="container mx-auto">
+        <div className="flex w-8/12 mx-auto rounded-xl border bg-card text-card-foreground shadow">
+
+        {/* Left Side */}
+        <div className="flex flex-col items-center justify-center w-1/2 py-16 px-12 bg-no-repeat bg-cover bg-center aspect-[1097/845] bg-gradient-to-tr from-[#98ff53] to-[#15e0ff] opacity-65" style={{backgroundImage: `linear-gradient(to top right, #98ff53, #15e0ff), url("https://images.unsplash.com/photo-1531496681078-27dc2277e898?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,}}>
+         
+          <div className="text-3xl mb-4 font-semibold">
+            <h1>Your Future Awaits</h1>
+          </div>
+          <div>
+            <p>Connecting Your Passion and Skills to Real Opportunities</p>
+          </div>
+        </div>
+
+        {/* Right Side */}
+        <div className="w-1/2 py-16 px-12" id="signup">
+    <div className="text-balance text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl text-center mb-12" >Signup As An Apprentice</div>
     <ul>
       {errors.map((error) => (
         <li key={error}>{error}</li>
       ))}
     </ul>
-    <form onSubmit={handleSubmit}>
+    <form className="mb-4" onSubmit={handleSubmit}>
+      <div className="mt-5">
+              <label htmlFor="Email" className="block text-sm font-semibold text-gray-900">
+                Email
+              </label>
+              <input
+                name="email"
+                type="email"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-900 sm:text-sm" required
+              />
+            </div>
+
+            <div className="mt-5">
+              <label htmlFor="Password" className="block text-sm font-semibold text-gray-900">
+                Password
+              </label>
+              <input
+                name="password"
+                type="password"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-900 sm:text-sm" required
+              />
+            </div>
+
+            <div className="mt-5">
+              <label htmlFor="Password Confirmation" className="block text-sm font-semibold text-gray-900">
+                Password Confirmation
+              </label>
+              <input
+                name="password_confrimation"
+                type="password_confrimation"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-900 sm:text-sm" required
+              />
+            </div>
+
+            <div className="mt-5">
+              <label htmlFor="Address" className="block text-sm font-semibold text-gray-900">
+                Address
+              </label>
+              <input
+                name="address"
+                type="text"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-900 sm:text-sm" required
+              />
+            </div>
+
+            <div className="mt-5 mb-4">
+            <p className="block text-lg font-semibold text-gray-900">What's Your Highest Level of Education?</p>
+              
+            </div>
+
       <div>
-        Email: <input name="email" type="email" required />
-      </div>
-      <div>
-        Password: <input name="password" type="password" required />
-      </div>
-      <div>
-          Password confirmation: <input name="password_confirmation" type="password" />
+        <div class="flex items-center mb-4">
+          <input type="radio" id="Highschool_GED" name="education" value="Highschool G.E.D." class="w-4 h-4 text-sky-600 bg-gray-100 border-gray-300 focus:ring-sky-500 dark:focus:ring-sky-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+          <label htmlFor="Highschool_GED" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Highschool G.E.D.</label><br />
         </div>
-      <div>
-        Address: <input name="address" type="text" />
-      </div>
-
-      <div>
-        <p>What's Your Highest Level of Education</p>
         
-        <input type="radio" id="Highschool_GED" name="education" value="Highschool G.E.D." />
-        <label htmlFor="Highschool_GED">Highschool G.E.D.</label><br />
+        <div class="flex items-center mb-4">
+          <input type="radio" id="Associates_Degree" name="education" value="Associates Degree" class="w-4 h-4 text-sky-600 bg-gray-100 border-gray-300 focus:ring-sky-500 dark:focus:ring-sky-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+          <label htmlFor="Associates_Degree" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Associates Degree</label><br />
+        </div>
 
-        <input type="radio" id="Associates_Degree" name="education" value="Associates Degree" />
-        <label htmlFor="Associates_Degree">Associates Degree</label><br />
-
-        <input type="radio" id="Undergraduate_Degree" name="education" value="Undergraduate Degree" />
-        <label htmlFor="Undergraduate_Degree">Undergraduate Degree</label><br />
-
-        <input type="radio" id="Graduate_Degree_or_Higher" name="education" value="Graduate Degree or Higher" />
-        <label htmlFor="Graduate_Degree_or_Higher">Graduate Degree or Higher</label><br />
+        <div class="flex items-center mb-4">
+          <input type="radio" id="Undergraduate_Degree" name="education" value="Undergraduate Degree" class="w-4 h-4 text-sky-600 bg-gray-100 border-gray-300 focus:ring-sky-500 dark:focus:ring-sky-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+          <label htmlFor="Undergraduate_Degree" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Undergraduate Degree</label><br />
+        </div>
+    
+        <div class="flex items-center mb-4">
+          <input type="radio" id="Graduate_Degree_or_Higher" name="education" value="Graduate Degree or Higher" class="w-4 h-4 text-sky-600 bg-gray-100 border-gray-300 focus:ring-sky-500 dark:focus:ring-sky-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+          <label htmlFor="Graduate_Degree_or_Higher" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Graduate Degree or Higher</label><br />
+        </div>
       </div>
 
-      <button type="submit">Signup As An Apprentice</button>
+      <Button className="bg-lime-400 text-slate-900 w-full text-lg hover:bg-lime-600 mt-5" type="submit">Signup As An Apprentice</Button>
     </form>
   </div>
-  );
+      </div>
+    </div>
+  </div>
+);
+
+
+    
 }
+
+

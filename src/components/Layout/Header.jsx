@@ -40,17 +40,6 @@ authenticationLinks = (
 
   return (
     
-    // <header>
-    //   <nav className="flex container mx-auto text-slate-900 py-4">
-    //     <img src="src/assets/Logo@2x.png" alt="" />
-    //     <div>
-    //       <Link to="/">Home</Link>
-    //     </div> 
-    //     <div>
-          
-    //     </div><Link to="/">View Apprenticeships</Link>  <Link to="/">View Apprenticeships</Link>{authenticationLinks} 
-    //   </nav>
-    // </header>
 
     <header className="bg-white">
       <nav className="container mx-auto flex items-center justify-between p-6 lg:px-8 text-" aria-label="Global">

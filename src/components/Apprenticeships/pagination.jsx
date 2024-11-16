@@ -1,30 +1,30 @@
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from "@/components/ui/pagination"
+
 
 export function Pagination () {
 
-<Pagination>
-  <PaginationContent>
-    <PaginationItem>
-      <PaginationPrevious href="#" />
-    </PaginationItem>
-    <PaginationItem>
-      <PaginationLink href="#">1</PaginationLink>
-    </PaginationItem>
-    <PaginationItem>
-      <PaginationEllipsis />
-    </PaginationItem>
-    <PaginationItem>
-      <PaginationNext href="#" />
-    </PaginationItem>
-  </PaginationContent>
-</Pagination>
+  return(
+    <main>
+      
+    </main>
+
+  )
 
 }
+
+{/* Pagination Controls */}
+        
+{/* <div className="pagination-controls container mx-auto">
+<Button
+  onClick={() => handlePageChange(currentPage - 1)}
+  disabled={currentPage === 1}
+>
+  Previous
+</Button>
+<span>Page {currentPage}</span>
+<Button
+  onClick={() => handlePageChange(currentPage + 1)}
+  disabled={indexOfLastItem >= filteredApprenticeships.length}
+>
+  Next
+</Button>
+</div> */}

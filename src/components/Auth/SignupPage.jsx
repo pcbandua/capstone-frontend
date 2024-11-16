@@ -9,7 +9,7 @@ export function SignupPage() {
   return (
     <div className="py-6" id="signup">
       <SignupPageApprentice />
-      <SignupPageEmployer />
     </div>
   );
 }
+

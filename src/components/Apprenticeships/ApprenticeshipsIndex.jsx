@@ -9,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Pagination } from "./pagination";
 
 export function ApprenticeshipsIndex({ apprenticeships, onShow }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -49,16 +50,22 @@ export function ApprenticeshipsIndex({ apprenticeships, onShow }) {
   };
 
   return (
-    <>
-      <div className="py-6 max-md:col-span-2" id="signup">
-        <div>
-          <h1>Earn and Learn</h1>
+    <div className="h-full">
+      <div className="py-6 max-md:col-span-2 mx-auto" id="signup">
 
-          <div className="dropdowns">
+       {/* Dropdowns + Searchbar */}
+      <div className="  bg-cyan-500 rounded-xl border bg-card text-card-foreground shadow px-6 py-6">
+      <div className="text-4xl mb-4 font-semibold">Search Apprenticeships</div> 
+      
+       <div className="flex flex-row gap-4 ">
+
+        {/* dropdowns */}
+        <div> 
+          <div className="dropdowns flex gap-4">
             {/* Job Holland Code Dropdown */}
-            <div>
-              <label>Job Holland Code</label>
-              <select
+            <div className="basis-1/3">
+              <label htmlFor="Holland Code" className="block text-sm font-semibold text-gray-900">By Holland Code</label>
+              <select className="mt-1 w-full block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-900 sm:text-sm"
                 value={selectedHollandCodePreference}
                 onChange={(e) => setSelectedHollandCodePreference(e.target.value)}
               >
@@ -72,9 +79,9 @@ export function ApprenticeshipsIndex({ apprenticeships, onShow }) {
             </div>
 
             {/* Compensation Dropdown */}
-            <div>
-              <label>Compensation</label>
-              <select
+            <div className="basis-1/3">
+              <label htmlFor="Holland Code" className="block text-sm font-semibold text-gray-900">By Hourly Compensation</label>
+              <select className="mt-1 w-full block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-900 sm:text-sm" 
                 value={selectedCompensation}
                 onChange={(e) => setSelectedCompensation(e.target.value)}
               >
@@ -90,24 +97,27 @@ export function ApprenticeshipsIndex({ apprenticeships, onShow }) {
         </div>
 
         {/* Search Box */}
-        <div className="py-6 bg-cyan-500 rounded-md container mx-auto flex items-center justify-center">
-          <div className="text-3xl mb-4 font-semibold">Browse Apprenticeships</div>  
+        <div className="basis-1/3">
+          
           <div>
-            <p>
-              Search: <input
-                className="rounded-md lg:w-96"
+          <label htmlFor="Search" className="block text-sm font-semibold text-gray-900">General Search</label>
+                <input
+                className="mt-1 w-full block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-900 sm:text-sm"
                 type="text"
                 value={searchTerm}
-                onChange={(event) => setSearchTerm(event.target.value)}
-              />
-            </p>
+                onChange={(event) => setSearchTerm(event.target.value)}/>
+          
           </div>
         </div>
+       </div>
+      </div> 
+      
+
 
         {/* Filtered Cards */}
         <div className="py-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {currentApprenticeships.map((apprenticeship) => (
-            <Card key={apprenticeship.id} className="w-96 mb-4 flex flex-col h-full">
+            <Card key={apprenticeship.id} className="w-12/12 mb-2 flex flex-col h-full">
               <div>
                 <CardHeader>
                   <div className="text-xl">
@@ -156,7 +166,7 @@ export function ApprenticeshipsIndex({ apprenticeships, onShow }) {
           </Button>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

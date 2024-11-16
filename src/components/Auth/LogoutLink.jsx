@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Button, buttonVariants } from "../ui/button";
 
 export function LogoutLink() {
   const handleClick = (event) => {
@@ -9,8 +10,10 @@ export function LogoutLink() {
   };
 
   return (
-    <a href="#" onClick={handleClick}>
+   
+    <Button onClick={handleClick}>
       Logout
-    </a>
+    </Button>
   );
 }
+

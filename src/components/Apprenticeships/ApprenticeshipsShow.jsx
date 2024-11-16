@@ -76,8 +76,8 @@ const handleCreateApplication = () => {
       <p><b>Hourly Compensation:</b> {apprenticeship.compensation}</p>
       <p><b>Time Committment:</b> {apprenticeship.duration}</p>
       <p><b>Nationally Recognized:</b> {apprenticeship.national_registered_status}</p></div>
-      <div className="flex justify-center pt-4 border-t mt-4">
-      <Button className="bg-lime-500 py-2 px-4 rounded-lg hover:bg-slate-200 transition  text-slate-900" onClick={handleCreateApplication}>Apply For This Apprenticeship</Button>
+      <div className="flex justify-left pt-4 border-t mt-4">
+      <Button className="bg-lime-500 py-2 px-4 rounded-lg hover:bg-slate-200 transition  text-slate-900" onClick={handleCreateApplication}>Submit Your Application</Button>
       </div>
       
     </div>
