@@ -66,7 +66,7 @@ authenticationLinks = (
         {/* Links for Desktop */}
         <div className="hidden lg:flex lg:gap-x-12 text-md ">
         <Link to="/landingpage" className=" font-semibold text-gray-900">How It Works</Link>
-          <Link to="/" className="font-semibold text-gray-900">Apprenticeships</Link>
+          <Link to="/" className="font-semibold text-gray-900">For Apprentices</Link>
           <a href="https://www.roguecc.edu/counseling/hollandcodes/test.asp" className=" font-semibold text-gray-900" target="blank" rel="noopener norefferrer">Get Your Holland Code Results</a>
         </div>
 

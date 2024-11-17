@@ -45,8 +45,8 @@ export default function WhyChooseUs () {
               </div>
               <div className="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
                 <img
-                  className="w-full max-lg:max-w-xs"
-                  src="https://tailwindui.com/plus/img/component-images/bento-03-performance.png"
+                  className="w-44 max-lg:max-w-xs"
+                  src="src/assets/Icons/SVG/Inclusive.svg"
                   alt=""
                 />
               </div>
@@ -65,8 +65,8 @@ export default function WhyChooseUs () {
               </div>
               <div className="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2">
                 <img
-                  className="h-[min(152px,40cqw)] object-cover"
-                  src="https://tailwindui.com/plus/img/component-images/bento-03-security.png"
+                  className="h-[min(40px,20cqw)]object-cover"
+                  src="src/assets/Icons/SVG/Strength.svg"
                   alt=""
                 />
               </div>

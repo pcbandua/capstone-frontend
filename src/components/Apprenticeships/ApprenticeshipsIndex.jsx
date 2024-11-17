@@ -57,13 +57,13 @@ export function ApprenticeshipsIndex({ apprenticeships, onShow }) {
        {/* Dropdowns + Searchbar */}
       <div className="  bg-cyan-500 rounded-xl border bg-card text-card-foreground shadow px-6 py-6">
       
-       <div className="flex flex-row gap-2 ">
+       <div className="flex flex-row gap-5 justify-center">
 
         {/* dropdowns */}
         <div> 
-          <div className="dropdowns flex gap-4">
+          <div className="dropdowns flex gap-5">
             {/* Job Holland Code Dropdown */}
-            <div className="flex-1">
+            <div className="flex-2">
               <label htmlFor="Holland Code" className="block text-sm font-semibold text-gray-900">By Holland Code</label>
               <select className="mt-1 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-900 sm:text-sm"
                 value={selectedHollandCodePreference}
@@ -79,7 +79,7 @@ export function ApprenticeshipsIndex({ apprenticeships, onShow }) {
             </div>
 
             {/* Compensation Dropdown */}
-            <div className="flex-1">
+            <div className="flex-2">
               <label htmlFor="Holland Code" className="block text-sm font-semibold text-gray-900">By Hourly Compensation</label>
               <select className="mt-1 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-900 sm:text-sm" 
                 value={selectedCompensation}
