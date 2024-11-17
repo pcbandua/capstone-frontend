@@ -18,7 +18,7 @@ export function ApprenticeshipsIndex({ apprenticeships, onShow }) {
   const [selectedHollandCodePreference, setSelectedHollandCodePreference] = useState("");
   const [selectedCompensation, setSelectedCompensation] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 8; // Adjust as needed
+  const itemsPerPage = 12; // Adjust as needed
 
   useEffect(() => {
     axios.get("http://localhost:3000/apprenticeships/filters")
@@ -50,20 +50,20 @@ export function ApprenticeshipsIndex({ apprenticeships, onShow }) {
   };
 
   return (
-    <div className="h-full">
+    <div className="h-1/2">
       <div className="py-6 max-md:col-span-2 mx-auto" id="signup">
 
+      <div className="text-4xl mb-4 font-semibold">Search Apprenticeships</div> 
        {/* Dropdowns + Searchbar */}
       <div className="  bg-cyan-500 rounded-xl border bg-card text-card-foreground shadow px-6 py-6">
-      <div className="text-4xl mb-4 font-semibold">Search Apprenticeships</div> 
       
-       <div className="flex flex-row gap-4 ">
+       <div className="flex flex-row gap-2 ">
 
         {/* dropdowns */}
         <div> 
           <div className="dropdowns flex gap-4">
             {/* Job Holland Code Dropdown */}
-            <div className="basis-1/3">
+            <div className="flex-1">
               <label htmlFor="Holland Code" className="block text-sm font-semibold text-gray-900">By Holland Code</label>
               <select className="mt-1 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-900 sm:text-sm"
                 value={selectedHollandCodePreference}
@@ -79,7 +79,7 @@ export function ApprenticeshipsIndex({ apprenticeships, onShow }) {
             </div>
 
             {/* Compensation Dropdown */}
-            <div className="basis-1/3">
+            <div className="flex-1">
               <label htmlFor="Holland Code" className="block text-sm font-semibold text-gray-900">By Hourly Compensation</label>
               <select className="mt-1 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-900 sm:text-sm" 
                 value={selectedCompensation}
@@ -97,7 +97,7 @@ export function ApprenticeshipsIndex({ apprenticeships, onShow }) {
         </div>
 
         {/* Search Box */}
-        <div className="basis-1/3">
+        <div className="flex-1">
           
           <div>
           <label htmlFor="Search" className="block text-sm font-semibold text-gray-900">General Search</label>
@@ -149,22 +149,24 @@ export function ApprenticeshipsIndex({ apprenticeships, onShow }) {
         </div>
 
         {/* Pagination Controls */}
-        
-        <div className="pagination-controls container mx-auto">
-          <Button
+        <div className=" gap-4">
+        <div className="pagination-controls container mx-auto items-center justify-center">
+          <Button className="bg-slate-200 text-slate-900 px-4 text-lg hover:bg-lime-600 mt-5"
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
           >
             Previous
           </Button>
-          <span>Page {currentPage}</span>
-          <Button
+          <span className="px-4">Page {currentPage}</span>
+          <Button className="bg-slate-200 text-slate-900 px-4 text-lg hover:bg-lime-600 mt-5"
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={indexOfLastItem >= filteredApprenticeships.length}
           >
             Next
           </Button>
         </div>
+        </div>
+        
       </div>
     </div>
   );

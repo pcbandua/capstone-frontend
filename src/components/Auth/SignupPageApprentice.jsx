@@ -28,14 +28,15 @@ export function SignupPageApprentice() {
         <div className="flex w-8/12 mx-auto rounded-xl border bg-card text-card-foreground shadow">
 
         {/* Left Side */}
-        <div className="flex flex-col items-center justify-center w-1/2 py-16 px-12 bg-no-repeat bg-cover bg-center aspect-[1097/845] bg-gradient-to-tr from-[#98ff53] to-[#15e0ff] opacity-65" style={{backgroundImage: `linear-gradient(to top right, #98ff53, #15e0ff), url("https://images.unsplash.com/photo-1531496681078-27dc2277e898?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,}}>
+        <div className="flex flex-col items-center justify-center w-1/2 py-16 px-12 bg-no-repeat bg-cover bg-center aspect-[1097/845] bg-gradient-to-tr from-[#98ff53] to-[#15e0ff] opacity-100" style={{backgroundImage:`url('src/assets/pics/student-learning-how-to-do-building-work-2024-06-25-18-30-55-utc.jpg')`, backgroundSize: 'cover',
+   backgroundPosition: 'center'}}>
          
-          <div className="text-3xl mb-4 font-semibold">
+          {/* <div className="text-3xl mb-4 font-semibold">
             <h1>Your Future Awaits</h1>
           </div>
           <div>
             <p>Connecting Your Passion and Skills to Real Opportunities</p>
-          </div>
+          </div> */}
         </div>
 
         {/* Right Side */}
@@ -47,7 +48,7 @@ export function SignupPageApprentice() {
       ))}
     </ul>
     <form className="mb-4" onSubmit={handleSubmit}>
-      <div className="mt-5">
+      <div className="mt-3">
               <label htmlFor="Email" className="block text-sm font-semibold text-gray-900">
                 Email
               </label>
@@ -58,7 +59,7 @@ export function SignupPageApprentice() {
               />
             </div>
 
-            <div className="mt-5">
+            <div className="mt-3">
               <label htmlFor="Password" className="block text-sm font-semibold text-gray-900">
                 Password
               </label>
@@ -69,7 +70,7 @@ export function SignupPageApprentice() {
               />
             </div>
 
-            <div className="mt-5">
+            <div className="mt-3">
               <label htmlFor="Password Confirmation" className="block text-sm font-semibold text-gray-900">
                 Password Confirmation
               </label>
@@ -80,7 +81,7 @@ export function SignupPageApprentice() {
               />
             </div>
 
-            <div className="mt-5">
+            <div className="mt-3">
               <label htmlFor="Address" className="block text-sm font-semibold text-gray-900">
                 Address
               </label>

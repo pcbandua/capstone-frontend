@@ -7,6 +7,8 @@ import { SignupPageApprentice } from "../Auth/SignupPageApprentice";
 import { SignupPageEmployer } from "../Auth/SignupPageEmployer";
 import { LoginPage } from "../Auth/LoginPage";
 import ApprenticeshipsAd from "./ApprenticeshipsAd";
+import BlogSection from './BlogSection';
+
 
 export function ApprenticeshipsPage() {
   const [isApprenticeshipsShowVisible, setIsApprenticeshipsShowVisible] = useState(false);
@@ -43,6 +45,7 @@ export function ApprenticeshipsPage() {
       <Modal show={isApprenticeshipsShowVisible} onClose={handleClose}>
         <ApprenticeshipsShow apprenticeship={currentApprenticeship}/>
       </Modal>
+      <BlogSection />
     </main>
   )
 }

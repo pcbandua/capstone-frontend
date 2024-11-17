@@ -13,11 +13,11 @@ export function Footer() {
     </div>
 
     <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-800">
-    Build Skills, Find Purpose
+    Build Skills, Find Purpose, Get Paid.
     </p>
 
     <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
-      {["How It Works", "Apprenticeships", "Mentors", "Login", "Sign Up"].map((item) => (
+      {["How It Works", "Apprenticeships", "Get Your Holland Code Results", "Login", "Sign Up"].map((item) => (
         <li key={item}>
           <a className="text-gray-700 transition hover:text-lime-400" href="#">
             {item}

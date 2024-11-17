@@ -21,12 +21,13 @@ if (localStorage.jwt === undefined) {
   console.log("logged out") 
 authenticationLinks = (
   <div className="text-lg font-semibold text-gray-900 lg:flex">
-    <div className="px-4 py-2 rounded-md">
-    <Link to="/login">Login</Link> >
-    </div>  
+     
     <div className="bg-lime-400 px-4 py-2 rounded-md">
     <Link to="/signup">Sign Up</Link>
     </div>
+    <div className="px-4 py-2 rounded-md">
+    <Link to="/login">Login</Link> >
+    </div> 
     
   </div>
 )}
@@ -37,8 +38,6 @@ authenticationLinks = (
     <LogoutLink />  
     )
   }
-
-  // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     
@@ -65,10 +64,10 @@ authenticationLinks = (
         </div>
         
         {/* Links for Desktop */}
-        <div className="hidden lg:flex lg:gap-x-12">
-          <Link to="/" className="text-lg font-semibold text-gray-900">Apprenticeships</Link>
-          <Link to="/landingpage" className="text-lg font-semibold text-gray-900">LandingPage</Link>
-          <a href="https://www.roguecc.edu/counseling/hollandcodes/test.asp" className="text-lg font-semibold text-gray-900" target="blank" rel="noopener norefferrer">Get Your Holland Code Results</a>
+        <div className="hidden lg:flex lg:gap-x-12 text-md ">
+        <Link to="/landingpage" className=" font-semibold text-gray-900">How It Works</Link>
+          <Link to="/" className="font-semibold text-gray-900">Apprenticeships</Link>
+          <a href="https://www.roguecc.edu/counseling/hollandcodes/test.asp" className=" font-semibold text-gray-900" target="blank" rel="noopener norefferrer">Get Your Holland Code Results</a>
         </div>
 
         {/* Authentication Links */}
