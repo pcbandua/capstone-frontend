@@ -7,45 +7,47 @@ import { SignupPageApprentice } from "../Auth/SignupPageApprentice";
 import { SignupPageEmployer } from "../Auth/SignupPageEmployer";
 import { LoginPage } from "../Auth/LoginPage";
 import ApprenticeshipsAd from "./ApprenticeshipsAd";
-import BlogSection from './BlogSection';
-
+import BlogSection from "./BlogSection";
 
 export function ApprenticeshipsPage() {
-  const [isApprenticeshipsShowVisible, setIsApprenticeshipsShowVisible] = useState(false);
+  const [isApprenticeshipsShowVisible, setIsApprenticeshipsShowVisible] =
+    useState(false);
   const [currentApprenticeship, setCurrentApprenticeship] = useState({});
 
+  const [apprenticeships, setApprenticeships] = useState([]);
+  const handleIndex = () => {
+    console.log("handleIndex");
+    axios.get("http://localhost:3000/apprenticeships.json").then((response) => {
+      console.log(response.data);
+      setApprenticeships(response.data);
+    });
+  };
 
-  const [apprenticeships, setApprenticeships] = useState ([])
-    const handleIndex = () => {
-      console.log("handleIndex");
-      axios.get("http://localhost:3000/apprenticeships.json").then ((response) => {
-        console.log(response.data);
-        setApprenticeships(response.data);
-      });
-    };
+  const handleShow = (apprenticeship) => {
+    console.log("handleShow", apprenticeship);
+    setIsApprenticeshipsShowVisible(true);
+    setCurrentApprenticeship(apprenticeship);
+  };
 
-    const handleShow = (apprenticeship) => {
-           console.log("handleShow", apprenticeship);
-           setIsApprenticeshipsShowVisible(true);
-           setCurrentApprenticeship(apprenticeship);
-         };
-      
-         const handleClose = () => {
-           console.log("handleClose");
-           setIsApprenticeshipsShowVisible(false);
-         };
+  const handleClose = () => {
+    console.log("handleClose");
+    setIsApprenticeshipsShowVisible(false);
+  };
 
-    useEffect(handleIndex, []);
-  
+  useEffect(handleIndex, []);
+
   return (
     <main>
       <ApprenticeshipsAd />
-   
-      <ApprenticeshipsIndex apprenticeships={apprenticeships} onShow={handleShow}/>
+
+      <ApprenticeshipsIndex
+        apprenticeships={apprenticeships}
+        onShow={handleShow}
+      />
       <Modal show={isApprenticeshipsShowVisible} onClose={handleClose}>
-        <ApprenticeshipsShow apprenticeship={currentApprenticeship}/>
+        <ApprenticeshipsShow apprenticeship={currentApprenticeship} />
       </Modal>
       <BlogSection />
     </main>
-  )
+  );
 }

@@ -2,10 +2,10 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 import { Header } from "./components/Layout/Header";
 import { SignupPage } from "./components/Auth/SignupPage";
-import {LoginPage} from "./components/Auth/LoginPage"
-import { ApprenticeshipsPage}  from "./components/Apprenticeships/ApprenticeshipsPage"
-import { Footer } from "./components/Layout/Footer"
-import { LandingPage } from "./LandingPage/LandingPage";
+import { LoginPage } from "./components/Auth/LoginPage";
+import { ApprenticeshipsPage } from "./components/Apprenticeships/ApprenticeshipsPage";
+import { Footer } from "./components/Layout/Footer";
+import { LandingPage } from "./components/LandingPage/LandingPage";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
       <div className="font-rubik container mx-auto">
         <Header />
         <div className="">
-        <Outlet />
+          <Outlet />
         </div>
         <Footer />
       </div>

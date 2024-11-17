@@ -9,11 +9,5 @@ export function LogoutLink() {
     window.location.href = "/";
   };
 
-  return (
-   
-    <Button onClick={handleClick}>
-      Logout
-    </Button>
-  );
+  return <Button onClick={handleClick}>Logout</Button>;
 }
-

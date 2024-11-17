@@ -4,31 +4,36 @@ import axios from "axios";
 export function FilterDropdowns() {
   const [hollandCodePreferences, setHollandCodePreferences] = useState([]);
   const [compensation, setCompensation] = useState([]);
-  const [selectedHollandCodePreference, setSelectedHollandCodePreference] = useState("");
+  const [selectedHollandCodePreference, setSelectedHollandCodePreference] =
+    useState("");
   const [selectedCompensation, setSelectedCompensation] = useState("");
 
   useEffect(() => {
     // Fetch filter data from Rails
-    axios.get("http://localhost:3000/apprenticeships/filters")
-      .then(response => {
+    axios
+      .get("http://localhost:3000/apprenticeships/filters")
+      .then((response) => {
         setHollandCodePreferences(response.data.holland_code_preference);
         setCompensation(response.data.compensation);
       })
-      .catch(error => console.error('Error fetching filter data:', error));
+      .catch((error) => console.error("Error fetching filter data:", error));
   }, []);
 
   function handleSearch() {
-    axios.get('/apprenticeships', {
-      params: {
-        holland_code_preference: selectedHollandCodePreference,
-        compensation: selectedCompensation,
-      }
-    })
-    .then(response => {
-      // Handle response with filtered apprenticeship data
-      console.log(response.data);
-    })
-    .catch(error => console.error('Error fetching apprenticeships:', error));
+    axios
+      .get("/apprenticeships", {
+        params: {
+          holland_code_preference: selectedHollandCodePreference,
+          compensation: selectedCompensation,
+        },
+      })
+      .then((response) => {
+        // Handle response with filtered apprenticeship data
+        console.log(response.data);
+      })
+      .catch((error) =>
+        console.error("Error fetching apprenticeships:", error)
+      );
   }
 
   return (

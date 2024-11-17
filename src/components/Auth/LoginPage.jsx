@@ -18,7 +18,8 @@ export function LoginPage() {
       .post("http://localhost:3000/sessions.json", params)
       .then((response) => {
         console.log(response.data);
-        axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.jwt;
+        axios.defaults.headers.common["Authorization"] =
+          "Bearer " + response.data.jwt;
         localStorage.setItem("jwt", response.data.jwt);
         event.target.reset();
         window.location.href = "/";
@@ -33,7 +34,6 @@ export function LoginPage() {
     <div className="min-h-36 py-40" id="login">
       <div className="container mx-auto">
         <div className="flex w-96 mx-auto rounded-xl border bg-card text-card-foreground shadow">
-  
           {/* Right Side */}
           <div className="w-full py-16 px-12">
             <div className="text-balance text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl text-center mb-12">
@@ -46,7 +46,10 @@ export function LoginPage() {
             </ul>
             <form className="mb-4" onSubmit={handleSubmit}>
               <div className="mt-5">
-                <label htmlFor="Email" className="block text-sm font-semibold text-gray-900">
+                <label
+                  htmlFor="Email"
+                  className="block text-sm font-semibold text-gray-900"
+                >
                   Email
                 </label>
                 <input
@@ -56,7 +59,10 @@ export function LoginPage() {
                 />
               </div>
               <div className="mt-5">
-                <label htmlFor="Password" className="block text-sm font-semibold text-gray-900">
+                <label
+                  htmlFor="Password"
+                  className="block text-sm font-semibold text-gray-900"
+                >
                   Password
                 </label>
                 <input
@@ -66,7 +72,10 @@ export function LoginPage() {
                 />
               </div>
               <div className="mt-10">
-                <Button className="bg-lime-400 text-slate-900 w-full text-lg hover:bg-lime-600 mt-5" type="submit">
+                <Button
+                  className="bg-lime-400 text-slate-900 w-full text-lg hover:bg-lime-600 mt-5"
+                  type="submit"
+                >
                   Login
                 </Button>
               </div>
