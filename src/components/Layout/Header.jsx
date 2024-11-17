@@ -38,10 +38,12 @@ authenticationLinks = (
     )
   }
 
+  // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     
 
-    <header className="bg-white">
+    <header className="bg-white z-50">
       <nav className="container mx-auto flex items-center justify-between p-6 lg:px-8 text-" aria-label="Global">
         
         {/* Logo Section */}
@@ -64,8 +66,9 @@ authenticationLinks = (
         
         {/* Links for Desktop */}
         <div className="hidden lg:flex lg:gap-x-12">
-          <Link to="/" className="text-lg font-semibold text-gray-900">Home</Link>
-          <Link to="/view-apprenticeships" className="text-lg font-semibold text-gray-900">Apprenticeships</Link>
+          <Link to="/" className="text-lg font-semibold text-gray-900">Apprenticeships</Link>
+          <Link to="/landingpage" className="text-lg font-semibold text-gray-900">LandingPage</Link>
+          <a href="https://www.roguecc.edu/counseling/hollandcodes/test.asp" className="text-lg font-semibold text-gray-900" target="blank" rel="noopener norefferrer">Get Your Holland Code Results</a>
         </div>
 
         {/* Authentication Links */}

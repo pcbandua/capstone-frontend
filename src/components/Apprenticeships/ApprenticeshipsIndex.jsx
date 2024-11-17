@@ -65,7 +65,7 @@ export function ApprenticeshipsIndex({ apprenticeships, onShow }) {
             {/* Job Holland Code Dropdown */}
             <div className="basis-1/3">
               <label htmlFor="Holland Code" className="block text-sm font-semibold text-gray-900">By Holland Code</label>
-              <select className="mt-1 w-full block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-900 sm:text-sm"
+              <select className="mt-1 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-900 sm:text-sm"
                 value={selectedHollandCodePreference}
                 onChange={(e) => setSelectedHollandCodePreference(e.target.value)}
               >
@@ -81,7 +81,7 @@ export function ApprenticeshipsIndex({ apprenticeships, onShow }) {
             {/* Compensation Dropdown */}
             <div className="basis-1/3">
               <label htmlFor="Holland Code" className="block text-sm font-semibold text-gray-900">By Hourly Compensation</label>
-              <select className="mt-1 w-full block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-900 sm:text-sm" 
+              <select className="mt-1 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-900 sm:text-sm" 
                 value={selectedCompensation}
                 onChange={(e) => setSelectedCompensation(e.target.value)}
               >
@@ -102,7 +102,7 @@ export function ApprenticeshipsIndex({ apprenticeships, onShow }) {
           <div>
           <label htmlFor="Search" className="block text-sm font-semibold text-gray-900">General Search</label>
                 <input
-                className="mt-1 w-full block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-900 sm:text-sm"
+                className="mt-1 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-900 sm:text-sm"
                 type="text"
                 value={searchTerm}
                 onChange={(event) => setSearchTerm(event.target.value)}/>

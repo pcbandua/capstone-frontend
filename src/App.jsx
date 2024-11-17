@@ -5,6 +5,7 @@ import { SignupPage } from "./components/Auth/SignupPage";
 import {LoginPage} from "./components/Auth/LoginPage"
 import { ApprenticeshipsPage}  from "./components/Apprenticeships/ApprenticeshipsPage"
 import { Footer } from "./components/Layout/Footer"
+import { LandingPage } from "./LandingPage/LandingPage";
 
 const router = createBrowserRouter([
   {
@@ -14,11 +15,14 @@ const router = createBrowserRouter([
         <div className="">
         <Outlet />
         </div>
-        
         <Footer />
       </div>
     ),
     children: [
+      {
+        path: "/landingpage",
+        element: <LandingPage />,
+      },
       {
         path: "/",
         element: <ApprenticeshipsPage />,
