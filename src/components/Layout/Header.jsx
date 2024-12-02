@@ -44,11 +44,7 @@ export function Header() {
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Earn While You Learn</span>
-            <img
-              className="h-8 w-auto"
-              src="src/assets/Logo@2x.png"
-              alt="Logo"
-            />
+            <img className="h-8 w-auto" src="/Logo@2x.png" alt="Logo" />
           </Link>
         </div>
 
