@@ -24,7 +24,7 @@ export function Header() {
           <Link to="/signup">Sign Up</Link>
         </div>
         <div className="px-4 py-2 rounded-md">
-          <Link to="/login">Login</Link> >
+          <Link to="/login">Login</Link>
         </div>
       </div>
     );
