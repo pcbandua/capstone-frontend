@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
               <div className="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
                 <img
                   className="w-44 max-lg:max-w-xs"
-                  src="src/assets/Icons/SVG/Inclusive.svg"
+                  src="/Icons/SVG/Inclusive.svg"
                   alt=""
                 />
               </div>
@@ -81,8 +81,8 @@ export default function WhyChooseUs() {
               </div>
               <div className="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2">
                 <img
-                  className="h-[min(40px,20cqw)]object-cover"
-                  src="src/assets/Icons/SVG/Strength.svg"
+                  className="p-8 object-cover ocject-center"
+                  src="/Icons/SVG/Strength.svg"
                   alt=""
                 />
               </div>

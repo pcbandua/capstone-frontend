@@ -12,6 +12,7 @@ import {
   NavigationMenuTrigger,
   NavigationMenuViewport,
 } from "../ui/navigation-menu";
+import { useState } from "react";
 
 export function Header() {
   let authenticationLinks;
@@ -33,6 +34,12 @@ export function Header() {
     console.log("I am logged in");
     authenticationLinks = <LogoutLink />;
   }
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <header className="bg-white z-50">
@@ -101,11 +108,12 @@ export function Header() {
         <div className="fixed inset-0 z-10"></div>
         <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <Link to="/" className="-m-1.5 p-1.5">
+            <Link to="/" className="-m-1.5 p-1.5" onClick={toggleMenu}>
               <span className="sr-only">Earn While You Learn</span>
               <img className="h-8 w-auto" src="/Logo@2x.png" alt="Logo" />
             </Link>
             <button
+              onClick={toggleMenu}
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
             >
@@ -132,12 +140,14 @@ export function Header() {
                 <Link
                   to="/"
                   className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+                  onClick={toggleMenu}
                 >
                   For Apprentices
                 </Link>
                 <Link
                   to="/landingpage"
                   className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+                  onClick={toggleMenu}
                 >
                   How It Works
                 </Link>

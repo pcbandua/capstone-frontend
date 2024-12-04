@@ -11,7 +11,7 @@ export default function Hero() {
       <div
         className="relative isolate px-6 pt-14 lg:px-8 overflow-hidden rounded-xl mb-4 before:absolute before:inset-0 before:bg-black/50 before:z-0 "
         style={{
-          backgroundImage: `url('src/assets/pics/two-women-wearing-safety-glasses-standing-in-a-met-2023-11-27-05-15-15-utc.jpg')`,
+          backgroundImage: `url('/pics/two-women-wearing-safety-glasses-standing-in-a-met-2023-11-27-05-15-15-utc.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

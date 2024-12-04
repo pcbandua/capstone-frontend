@@ -1,6 +1,6 @@
 import ForEmployers from "./ForEmployers";
 import Hero from "./Hero";
-import WhyChooseUs from "./WhyChooseUse";
+import WhyChooseUs from "./WhyChooseUs";
 import TrustedBy from "./TrustedBy";
 
 export function LandingPage() {

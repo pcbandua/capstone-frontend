@@ -30,7 +30,7 @@ export function SignupPageApprentice() {
           <div
             className="flex flex-col items-center justify-center w-1/2 py-16 px-12 bg-no-repeat bg-cover bg-center aspect-[1097/845] bg-gradient-to-tr from-[#98ff53] to-[#15e0ff] opacity-100"
             style={{
-              backgroundImage: `url('src/assets/pics/student-learning-how-to-do-building-work-2024-06-25-18-30-55-utc.jpg')`,
+              backgroundImage: `url('/pics/student-learning-how-to-do-building-work-2024-06-25-18-30-55-utc.jpg')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
