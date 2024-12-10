@@ -15,10 +15,13 @@ export function Footer() {
         <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
           {[
             "How It Works",
-            "Apprenticeships",
+            "For Apprenticess",
             "Get Your Holland Code Results",
             "Login",
             "Sign Up",
+            "Privacy Policy",
+            "Accessibility Statement",
+            "Terms and Conditions",
           ].map((item) => (
             <li key={item}>
               <a

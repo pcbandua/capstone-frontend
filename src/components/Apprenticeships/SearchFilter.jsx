@@ -38,8 +38,6 @@ export function FilterDropdowns() {
 
   return (
     <div>
-      <h1>Tech Jobs for Good.</h1>
-
       <div className="dropdowns">
         {/* Job Holland Code Dropdown */}
         <div>

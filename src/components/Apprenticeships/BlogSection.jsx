@@ -112,7 +112,7 @@ export default function BlogSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-            SkillBuilder Perspectives
+            Skill-Builder Perspectives
           </h2>
           <p className="mt-2 text-lg/8 text-gray-600">
             Helpful hints for your apprenticeship journey.

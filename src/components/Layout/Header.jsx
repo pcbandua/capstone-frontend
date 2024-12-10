@@ -42,7 +42,7 @@ export function Header() {
   };
 
   return (
-    <header className="bg-white z-50">
+    <header className="sticky top-0 bg-white z-50">
       <nav
         className="container mx-auto flex items-center justify-between p-6 lg:px-8 text-"
         aria-label="Global"
@@ -51,7 +51,11 @@ export function Header() {
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Earn While You Learn</span>
-            <img className="h-8 w-auto" src="/Logo@2x.png" alt="Logo" />
+            <img
+              className="h-8 w-auto"
+              src="/Logo@2x.png"
+              alt="Earn While You Learn Logo"
+            />
           </Link>
         </div>
 
@@ -104,7 +108,7 @@ export function Header() {
       </nav>
 
       {/* Mobile Menu (hidden by default) */}
-      <div className="lg:hidden" role="dialog" aria-modal="true">
+      {/* <div className="lg:hidden" role="dialog" aria-modal="true">
         <div className="fixed inset-0 z-10"></div>
         <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
@@ -156,7 +160,7 @@ export function Header() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </header>
   );
 }
