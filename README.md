@@ -31,20 +31,22 @@ Features 1. Search Bar: Find apprenticeships by title. 2. Filters: Narrow result
 Launch Instructions
 
 1.  Clone the repository:
+
     git clone https://github.com/your-username/apprenticeships-search.git  
     cd apprenticeships-search
 
 2.  Set up and start the backend (Rails server):
-    cd backend  
-     rails server
 
-        3.	Set up and start the frontend (React app):
+    cd backend  
+    rails server
+
+ 3. Set up and start the frontend (React app):
 
     cd frontend  
     npm install  
     npm start
 
-    4.  Open the app in your browser at http://localhost:5173.
+ 4.  Open the app in your browser at http://localhost:5173.
 
 Project Status
 
